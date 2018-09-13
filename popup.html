@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Getting Started Extension's Popup</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            /*background: #000;*/
+            color: #fff;
+            font-size: 12px;
+        }
+        #popup {
+            width: 150px;
+        }
+        #popup>div {
+            display: flex;
+            justify-content: center;
+        }
+        #popup>div>span {
+            flex: 1;
+            padding: 5px;
+        }
+        #popup button {
+            width: 100%;
+
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+<div id="popup">
+    <div>
+        <span>
+            <button id="read">读取</button>
+        </span>
+        <span>
+            <button id="clear">清除</button>
+        </span>
+    </div>
+    <div>
+        <span>
+            <button id="write">载入数据</button>
+        </span>
+    </div>
+</div>
+</body>
+</html>

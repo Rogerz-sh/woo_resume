@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "WooResume",
+  "version": "0.2.4",
+  "description": "Catch Resume Data from Websites",
+  "icons": {
+    "24": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png" ,
+    "default_title": "WooResume",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://h.liepin.com/resume/showresumedetail/*"],
+      "js": ["jquery.min.js", "liepin.js"]
+    },
+    {
+      "matches": ["http://h.highpin.cn/ResumeManage/HaveDownLoadResumeDetail*", "http://h.highpin.cn/SearchResume/SearchZhaopinResumeInfo*"],
+      "js": ["jquery.min.js", "highpin.js"]
+    },
+    {
+      "matches": ["http://rd.zhaopin.com/resumepreview/resume/*"],
+      "js": ["jquery.min.js", "zhaopin.js"]
+    },
+    {
+      "matches": ["http://ehire.51job.com/Candidate/*"],
+      "js": ["jquery.min.js", "51job.js"]
+    },
+    {
+      "matches": ["http://sys.giewoo.com/*"],
+      "js": ["jquery.min.js", "write.js"]
+    }
+  ]
+}
